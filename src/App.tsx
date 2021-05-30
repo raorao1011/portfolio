@@ -1,15 +1,18 @@
-import { ChakraProvider } from "@chakra-ui/react";
 import React from "react";
+import { Router } from "./router/Router";
+import { ChakraProvider } from "@chakra-ui/react";
+import { BrowserRouter } from "react-router-dom";
 import "./App.css";
-import { Home } from "./Home";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <ChakraProvider>
-        <Home />
+        <BrowserRouter>
+          <Router />
+        </BrowserRouter>
       </ChakraProvider>
-    </div>
+    </>
   );
 }
 
