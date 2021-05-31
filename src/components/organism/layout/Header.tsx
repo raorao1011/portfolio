@@ -42,8 +42,15 @@ export const Header: VFC = () => {
         justify="space-between"
         padding={{ base: 3, md: 4 }}
         boxShadow="xl"
+        position="fixed"
+        w="100%"
       >
-        <Flex as="a" _hover={{ cursor: "pointer", opacity: "0.9" }} ml={10} onClick={onClickHome}>
+        <Flex
+          as="a"
+          _hover={{ cursor: "pointer", opacity: "0.9" }}
+          ml={10}
+          onClick={onClickHome}
+        >
           <Heading as="h1" fontSize={{ base: "xl", md: 25 }}>
             PORTFOLIO
           </Heading>

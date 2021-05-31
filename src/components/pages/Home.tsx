@@ -7,10 +7,12 @@ export const Home: VFC = () => {
     <>
       <Box
         bgImage="url('https://source.unsplash.com/nvzvOPQW0gc')"
+        bgRepeat="no-repeat"
+        bgPosition="center"
         bgSize="cover"
       >
         <Box height="100vh">
-          <Center as="h1" >
+          <Center as="h1" height="100%" fontSize="xl">
             WELCOME TO MY PORTFOLIO.
           </Center>
         </Box>
