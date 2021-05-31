@@ -5,6 +5,7 @@ import { Contact } from "../components/pages/Contact";
 import { Home } from "../components/pages/Home";
 import { Page404 } from "../components/pages/Page404";
 import { Product } from "../components/pages/Product";
+import { Profile } from "../components/pages/Profile";
 
 export const Router: VFC = () => {
   return (
@@ -12,6 +13,9 @@ export const Router: VFC = () => {
       <Switch>
         <Route exact path="/">
           <Home />
+        </Route>
+        <Route path="/profile">
+          <Profile />
         </Route>
         <Route path="/product">
           <Product />

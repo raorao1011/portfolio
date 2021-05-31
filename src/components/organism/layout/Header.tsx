@@ -1,14 +1,13 @@
-import React, { ReactNode, VFC } from "react";
-import { BrowserRouter, Link } from "react-router-dom";
+import React, { VFC } from "react";
+import { Link } from "react-router-dom";
 
-export const Header: VFC = (props) => {
+export const Header: VFC = () => {
   return (
     <div style={{ backgroundColor: "pink" }}>
-      <BrowserRouter>
-        <Link to="/">Home</Link>
-        <Link to="/product">product</Link>
-        <Link to="/contact">contact</Link>
-      </BrowserRouter>
+      <Link to="/">Home</Link>
+      <Link to="/profile">profile</Link>
+      <Link to="/product">product</Link>
+      <Link to="/contact">contact</Link>
     </div>
   );
 };
