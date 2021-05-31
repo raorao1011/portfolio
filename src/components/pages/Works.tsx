@@ -1,9 +1,9 @@
 import React, { VFC } from "react";
 
-export const Product: VFC = () => {
+export const Works: VFC = () => {
   return (
     <div>
-      <p>Productページです。</p>
+      <p>Worksページです。</p>
     </div>
   );
 };
