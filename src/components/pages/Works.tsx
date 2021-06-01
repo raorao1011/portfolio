@@ -1,9 +1,12 @@
+import { Box, Heading } from "@chakra-ui/layout";
 import React, { VFC } from "react";
 
 export const Works: VFC = () => {
   return (
-    <div>
-      <p>Worksページです。</p>
-    </div>
+    <>
+      <Box>
+        <Heading>Works</Heading>
+      </Box>
+    </>
   );
 };

@@ -4,7 +4,7 @@ import { Contact } from "../components/pages/Contact";
 import { Home } from "../components/pages/Home";
 import { Page404 } from "../components/pages/Page404";
 import { Works } from "../components/pages/Works";
-import { Profile } from "../components/pages/Profile";
+import { Skills } from "../components/pages/Skills";
 
 export const Router: VFC = () => {
   return (
@@ -13,8 +13,8 @@ export const Router: VFC = () => {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/profile">
-          <Profile />
+        <Route path="/skills">
+          <Skills />
         </Route>
         <Route path="/works">
           <Works />
