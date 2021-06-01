@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useForm } from "react-hook-form";
-import { Input, Button } from "@chakra-ui/react";
+import { Input, Button, Box, Flex } from "@chakra-ui/react";
 import { FormErrorMessage, FormLabel, FormControl } from "@chakra-ui/react";
 
 type FormData = {
@@ -30,37 +30,41 @@ export function Contact() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} style={{paddingTop: "90px"}}>
-      <FormControl id="firstName" isInvalid={!!errors.firstName} isRequired>
-        <FormLabel>First Name</FormLabel>
-        <Input
-          placeholder="first name"
-          {...register("firstName", { required: true })}
-        />
-        <FormErrorMessage>
-          {errors.firstName && "First name is required"}
-        </FormErrorMessage>
-      </FormControl>
+    <form onSubmit={handleSubmit(onSubmit)} style={{ paddingTop: "90px" }}>
+      <Flex justify="center" textAlign="center">
+        <Box w="sm" p={4} borderRadius="md" shadow="md" bg="gray.50">
+          <FormControl id="firstName" isInvalid={!!errors.firstName} isRequired>
+            <FormLabel>First Name</FormLabel>
+            <Input
+              placeholder="first name"
+              {...register("firstName", { required: true })}
+            />
+            <FormErrorMessage>
+              {errors.firstName && "First name is required"}
+            </FormErrorMessage>
+          </FormControl>
 
-      <FormControl id="lastName" isInvalid={!!errors.lastName} isRequired>
-        <FormLabel>Last Name</FormLabel>
-        <Input
-          placeholder="last name"
-          {...register("lastName", { required: true })}
-        />
-        <FormErrorMessage>
-          {errors.lastName && "Last name is required"}
-        </FormErrorMessage>
-      </FormControl>
+          <FormControl id="lastName" isInvalid={!!errors.lastName} isRequired>
+            <FormLabel>Last Name</FormLabel>
+            <Input
+              placeholder="last name"
+              {...register("lastName", { required: true })}
+            />
+            <FormErrorMessage>
+              {errors.lastName && "Last name is required"}
+            </FormErrorMessage>
+          </FormControl>
 
-      <Button
-        mt={4}
-        colorScheme="teal"
-        isLoading={formState.isSubmitting}
-        type="submit"
-      >
-        Submit
-      </Button>
+          <Button
+            mt={4}
+            colorScheme="teal"
+            isLoading={formState.isSubmitting}
+            type="submit"
+          >
+            Submit
+          </Button>
+        </Box>
+      </Flex>
     </form>
   );
 }
