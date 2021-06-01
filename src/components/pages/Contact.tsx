@@ -30,7 +30,7 @@ export function Contact() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)} style={{paddingTop: "90px"}}>
       <FormControl id="firstName" isInvalid={!!errors.firstName} isRequired>
         <FormLabel>First Name</FormLabel>
         <Input
