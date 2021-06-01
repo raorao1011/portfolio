@@ -21,7 +21,7 @@ export const Header: VFC = () => {
   }, []);
 
   const onClickProfile = useCallback(() => {
-    history.push("/profile");
+    history.push("/skills");
   }, []);
 
   const onClickWorks = useCallback(() => {
@@ -100,7 +100,7 @@ export const Header: VFC = () => {
         />
       </Flex>
       {/* placememntはどこからドロワーを出現させるか */}
-      <Drawer placement="right" size="sx" onClose={onClose} isOpen={isOpen}>
+      <Drawer placement="right" size="xs" onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay>
           <DrawerContent>
             {/* DrawerBodyにはpが初期設定されている */}
