@@ -18,18 +18,22 @@ export const Header: VFC = () => {
 
   const onClickHome = useCallback(() => {
     history.push("/");
+    onClose();
   }, []);
 
   const onClickProfile = useCallback(() => {
     history.push("/skills");
+    onClose();
   }, []);
 
   const onClickWorks = useCallback(() => {
     history.push("/works");
+    onClose();
   }, []);
 
   const onClickContact = useCallback(() => {
     history.push("/contact");
+    onClose();
   }, []);
 
   return (
