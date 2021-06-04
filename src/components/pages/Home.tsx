@@ -1,5 +1,5 @@
 import { Image } from "@chakra-ui/react";
-import { Box, Center, Heading } from "@chakra-ui/layout";
+import { Box, Center, Heading, Text } from "@chakra-ui/layout";
 import React, { VFC } from "react";
 
 export const Home: VFC = () => {
@@ -12,8 +12,8 @@ export const Home: VFC = () => {
         bgSize="cover"
       >
         <Box height="100vh">
-          <Center as="h1" height="100%" fontSize="3xl">
-            WELCOME TO MY PORTFOLIO.
+          <Center as="h1" height="100%" >
+            <Text letterSpacing={5} fontSize="3xl">WELCOME TO MY PORTFOLIO.</Text>
           </Center>
         </Box>
       </Box>

@@ -93,28 +93,28 @@ export const Header: VFC = () => {
             _hover={{ cursor: "pointer", opacity: "0.9" }}
             fontSize="md"
           >
-            <Link onClick={onClickHome}>HOME</Link>
+            <Link onClick={onClickHome} textDecoration="none">HOME</Link>
           </Box>
           <Box
             pr={4}
             _hover={{ cursor: "pointer", opacity: "0.9" }}
             fontSize="md"
           >
-            <Link onClick={onClickProfile}>PROFILE</Link>
+            <Link onClick={onClickProfile} textDecoration="none">SKILLS</Link>
           </Box>
           <Box
             pr={4}
             _hover={{ cursor: "pointer", opacity: "0.9" }}
             fontSize="md"
           >
-            <Link onClick={onClickWorks}>WORKS</Link>
+            <Link onClick={onClickWorks} textDecoration="none">WORKS</Link>
           </Box>
           <Box
             pr={4}
             _hover={{ cursor: "pointer", opacity: "0.9" }}
             fontSize="md"
           >
-            <Link onClick={onClickContact}>CONTACT</Link>
+            <Link onClick={onClickContact} textDecoration="none">CONTACT</Link>
           </Box>
         </Flex>
         <IconButton
