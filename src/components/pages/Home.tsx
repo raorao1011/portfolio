@@ -12,7 +12,7 @@ export const Home: VFC = () => {
         bgSize="cover"
       >
         <Box height="100vh">
-          <Center as="h1" height="100%" fontSize="xl">
+          <Center as="h1" height="100%" fontSize="3xl">
             WELCOME TO MY PORTFOLIO.
           </Center>
         </Box>
