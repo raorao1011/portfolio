@@ -1,7 +1,7 @@
 import React, { useCallback, VFC } from "react";
-import { Box, Center, Flex, Heading, Link } from "@chakra-ui/layout";
+import { Box, Flex, Heading, Link } from "@chakra-ui/layout";
 import { Button, IconButton } from "@chakra-ui/button";
-import { HamburgerIcon } from "@chakra-ui/icons";
+import { ExternalLinkIcon, HamburgerIcon, Icon } from "@chakra-ui/icons";
 import {
   Drawer,
   DrawerBody,
@@ -9,6 +9,8 @@ import {
   DrawerOverlay,
 } from "@chakra-ui/modal";
 import { useDisclosure } from "@chakra-ui/hooks";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import TwitterIcon from "@material-ui/icons/Twitter";
 import { useHistory } from "react-router";
 
 export const Header: VFC = () => {
@@ -65,6 +67,27 @@ export const Header: VFC = () => {
           display={{ base: "none", md: "flex" }}
           mr={10}
         >
+          <Link
+            w={12}
+            h={12}
+            cursor="pointer"
+            _hover={{ opacity: "0.8" }}
+            href="https://github.com/raorao1011"
+            isExternal
+          >
+            <Icon as={GitHubIcon} />
+          </Link>
+          <Link
+            pr={4}
+            w={12}
+            h={12}
+            cursor="pointer"
+            _hover={{ opacity: "0.8" }}
+            href="https://twitter.com/mth_rao"
+            isExternal
+          >
+            <Icon as={TwitterIcon} />
+          </Link>
           <Box
             pr={4}
             _hover={{ cursor: "pointer", opacity: "0.9" }}
@@ -98,7 +121,7 @@ export const Header: VFC = () => {
           aria-label="メニューボタン"
           icon={<HamburgerIcon />}
           size="sm"
-          variant="unstyled"
+          variant="outline"
           display={{ base: "block", md: "none" }}
           onClick={onOpen}
         />
@@ -120,6 +143,16 @@ export const Header: VFC = () => {
               </Button>
               <Button w="100%" onClick={onClickContact}>
                 CONTACT
+              </Button>
+              <Button w="100%">
+                <Link href="https://github.com/raorao1011" isExternal>
+                  GitHub <ExternalLinkIcon mx="2px" />
+                </Link>
+              </Button>
+              <Button w="100%">
+                <Link href="https://twitter.com/mth_rao" isExternal>
+                  Twitter <ExternalLinkIcon mx="2px" />
+                </Link>
               </Button>
             </DrawerBody>
           </DrawerContent>
