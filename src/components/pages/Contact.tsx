@@ -14,9 +14,9 @@ type FormData = {
  * 
   フックから必要なオブジェクトを分割代入
   register:  バリデーションをチェックするinputをフックに登録するためのものである
-  handleSubmit:
-  formState:
-  formState: { errors }:
+  handleSubmit:  フォームの送信が成功すると呼び出されるメソッド、引数には成功したら呼び出したい関数をセットする 例)onSubmit={handleSubmit(unSubmit)}
+  formState: フォームの状態に関する情報が入っているオブジェクト
+  formState: { errors }: エラーだけ抜き出している
   初期値mode: "all": どの状態でvalidationを発動させるか, allだとblur,change eventで発動するようになる
  */
 
