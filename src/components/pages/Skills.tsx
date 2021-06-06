@@ -29,7 +29,7 @@ export const Skills: VFC = () => {
               <Heading size="3xl">Skills</Heading>
               <Divider />
               <Text fontSize="3xl">HTML / CSS / React / Next.js</Text>
-              <Text fontSize="3xl">Redux / TypeScript / FireBase</Text>
+              <Text fontSize="3xl">Redux / TypeScript / Firebase</Text>
             </Stack>
           </Box>
           <Box w="xl">

@@ -1,5 +1,5 @@
 import React, { useCallback, VFC } from "react";
-import { Box, Flex, Heading, Link } from "@chakra-ui/layout";
+import { Box, Flex, Heading, Link, Text } from "@chakra-ui/layout";
 import { Button, IconButton } from "@chakra-ui/button";
 import { ExternalLinkIcon, HamburgerIcon, Icon } from "@chakra-ui/icons";
 import {
@@ -90,31 +90,31 @@ export const Header: VFC = () => {
           </Link>
           <Box
             pr={4}
-            _hover={{ cursor: "pointer", opacity: "0.9" }}
+            _hover={{ cursor: "pointer", opacity: "0.7" }}
             fontSize="md"
           >
-            <Link onClick={onClickHome} textDecoration="none">HOME</Link>
+            <Text onClick={onClickHome}>HOME</Text>
           </Box>
           <Box
             pr={4}
-            _hover={{ cursor: "pointer", opacity: "0.9" }}
+            _hover={{ cursor: "pointer", opacity: "0.7" }}
             fontSize="md"
           >
-            <Link onClick={onClickProfile} textDecoration="none">SKILLS</Link>
+            <Text onClick={onClickProfile}>SKILLS</Text>
           </Box>
           <Box
             pr={4}
-            _hover={{ cursor: "pointer", opacity: "0.9" }}
+            _hover={{ cursor: "pointer", opacity: "0.7" }}
             fontSize="md"
           >
-            <Link onClick={onClickWorks} textDecoration="none">WORKS</Link>
+            <Text onClick={onClickWorks}>WORKS</Text>
           </Box>
           <Box
             pr={4}
-            _hover={{ cursor: "pointer", opacity: "0.9" }}
+            _hover={{ cursor: "pointer", opacity: "0.7" }}
             fontSize="md"
           >
-            <Link onClick={onClickContact} textDecoration="none">CONTACT</Link>
+            <Text onClick={onClickContact}>CONTACT</Text>
           </Box>
         </Flex>
         <IconButton
