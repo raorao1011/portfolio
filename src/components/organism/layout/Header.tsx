@@ -5,7 +5,9 @@ import { ExternalLinkIcon, HamburgerIcon, Icon } from "@chakra-ui/icons";
 import {
   Drawer,
   DrawerBody,
+  DrawerCloseButton,
   DrawerContent,
+  DrawerHeader,
   DrawerOverlay,
 } from "@chakra-ui/modal";
 import { useDisclosure } from "@chakra-ui/hooks";
@@ -51,12 +53,7 @@ export const Header: VFC = () => {
         position="fixed"
         w="100%"
       >
-        <Flex
-          as="a"
-          _hover={{ cursor: "pointer", opacity: "0.9" }}
-          ml={10}
-          onClick={onClickHome}
-        >
+        <Flex as="a" _hover={{ cursor: "pointer", opacity: "0.9" }} ml={10} onClick={onClickHome}>
           <Heading as="h1" fontSize={{ base: "xl", md: 25 }}>
             PORTFOLIO
           </Heading>
@@ -88,32 +85,16 @@ export const Header: VFC = () => {
           >
             <Icon as={TwitterIcon} />
           </Link>
-          <Box
-            pr={4}
-            _hover={{ cursor: "pointer", opacity: "0.7" }}
-            fontSize="md"
-          >
+          <Box pr={4} _hover={{ cursor: "pointer", opacity: "0.7" }} fontSize="md">
             <Text onClick={onClickHome}>HOME</Text>
           </Box>
-          <Box
-            pr={4}
-            _hover={{ cursor: "pointer", opacity: "0.7" }}
-            fontSize="md"
-          >
+          <Box pr={4} _hover={{ cursor: "pointer", opacity: "0.7" }} fontSize="md">
             <Text onClick={onClickProfile}>SKILLS</Text>
           </Box>
-          <Box
-            pr={4}
-            _hover={{ cursor: "pointer", opacity: "0.7" }}
-            fontSize="md"
-          >
+          <Box pr={4} _hover={{ cursor: "pointer", opacity: "0.7" }} fontSize="md">
             <Text onClick={onClickWorks}>WORKS</Text>
           </Box>
-          <Box
-            pr={4}
-            _hover={{ cursor: "pointer", opacity: "0.7" }}
-            fontSize="md"
-          >
+          <Box pr={4} _hover={{ cursor: "pointer", opacity: "0.7" }} fontSize="md">
             <Text onClick={onClickContact}>CONTACT</Text>
           </Box>
         </Flex>
@@ -131,6 +112,8 @@ export const Header: VFC = () => {
         <DrawerOverlay>
           <DrawerContent>
             {/* DrawerBodyにはpが初期設定されている */}
+            <DrawerCloseButton />
+            <DrawerHeader>Menu</DrawerHeader>
             <DrawerBody p={0} bg="">
               <Button w="100%" onClick={onClickHome}>
                 HOME

@@ -100,7 +100,7 @@ export function Contact() {
               isLoading={formState.isSubmitting}
               type="submit"
             >
-              Submit
+              送信
             </Button>
           </Box>
         </Flex>
