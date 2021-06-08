@@ -79,7 +79,7 @@ export function Contact() {
                   {...register("email", { required: true })}
                 />
                 <FormErrorMessage>
-                  {errors.name && "メールアドレスを入力してください"}
+                  {errors.email && "メールアドレスを入力してください"}
                 </FormErrorMessage>
               </FormControl>
               <FormControl id="contents" isInvalid={!!errors.contents} >
