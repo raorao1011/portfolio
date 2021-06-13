@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Input, Button, Box, Flex, Stack, Heading, useToast, Divider } from "@chakra-ui/react";
 import { FormErrorMessage, FormLabel, FormControl } from "@chakra-ui/react";
@@ -13,14 +13,15 @@ export const Contact = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    reset,
+    formState: { errors, isSubmitting, isSubmitSuccessful },
   } = useForm<FormData>({
     mode: "onSubmit",
   });
   const toast = useToast();
 
-  const onSubmit = (values: any) => {
-    return new Promise(() => {
+  const onSubmit = (data: any) => {
+    return new Promise((resolve) => {
       setTimeout(() => {
         toast({
           title: "送信完了",
@@ -30,9 +31,16 @@ export const Contact = () => {
           duration: 3000,
           isClosable: true,
         });
+        resolve(false);
       }, 3000);
     });
   };
+
+  useEffect(() => {
+    if (isSubmitSuccessful) {
+      reset();
+    }
+  }, [isSubmitSuccessful]);
 
   return (
     <form
