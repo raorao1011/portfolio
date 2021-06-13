@@ -17,5 +17,14 @@ module.exports = {
         "@typescript-eslint"
     ],
     "rules": {
-    }
+    },
+    "@typescript-eslint/naming-convention": [
+        "error",
+        {
+            "selector": "variable",
+            "types": ["boolean"],
+            "format": ["PascalCase"],
+            "prefix": ["is"]
+        }
+    ]
 };
