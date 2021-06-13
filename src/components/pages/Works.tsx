@@ -1,8 +1,8 @@
 import React, { VFC } from "react";
 import { Img } from "@chakra-ui/image";
 import { Box, Center, Heading, Stack, Wrap, WrapItem } from "@chakra-ui/layout";
-import portfolioImage from "../../img/portfolio.png";
 import { Button } from "@chakra-ui/button";
+import portfolioImage from "../../img/portfolio.png";
 
 export const Works: VFC = () => {
   return (
@@ -18,7 +18,7 @@ export const Works: VFC = () => {
             _hover={{ cursor: "pointer" }}
           >
             <Stack textAlign="center" spacing={4}>
-              <Box borderWidth="1px" borderColor="gray.200">
+              <Box borderWidth="1px" bg="white">
                 <Img
                   src={portfolioImage}
                   w="md"
