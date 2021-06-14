@@ -1,6 +1,6 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { Input, Button, Box, Flex, Stack, Heading, useToast, Divider } from "@chakra-ui/react";
+import { Input, Button, Box, Flex, Stack, Heading, useToast, Divider, Skeleton } from "@chakra-ui/react";
 import { FormErrorMessage, FormLabel, FormControl } from "@chakra-ui/react";
 
 type FormData = {
@@ -19,6 +19,7 @@ export const Contact = () => {
     mode: "onSubmit",
   });
   const toast = useToast();
+  const [isLoaded, setIsLoaded] = useState<boolean>(false);
 
   const onSubmit = (data: any) => {
     return new Promise((resolve) => {
@@ -37,6 +38,12 @@ export const Contact = () => {
   };
 
   useEffect(() => {
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 100);
+  }, [Image]);
+
+  useEffect(() => {
     if (isSubmitSuccessful) {
       reset();
     }
@@ -48,30 +55,32 @@ export const Contact = () => {
       style={{ paddingTop: "13%", backgroundColor: "#EEEEF0", height: "100vh" }}
     >
       <Flex justify="center" textAlign="center">
-        <Box w="xl" p={6} borderRadius="10px" boxShadow="md" bg="white">
-          <Stack spacing={5}>
-            <Heading fontSize={30}>CONTACT</Heading>
-            <Divider />
-            <FormControl id="name" isInvalid={!!errors.name}>
-              <FormLabel>お名前(必須)</FormLabel>
-              <Input placeholder="山田  太郎" {...register("name", { required: true })} />
-              <FormErrorMessage>{errors.name && "お名前を入力してください"}</FormErrorMessage>
-            </FormControl>
-            <FormControl id="email" isInvalid={!!errors.email}>
-              <FormLabel>メールアドレス(必須)</FormLabel>
-              <Input placeholder="test@example.com" {...register("email", { required: true })} />
-              <FormErrorMessage>{errors.email && "メールアドレスを入力してください"}</FormErrorMessage>
-            </FormControl>
-            <FormControl id="contents" isInvalid={!!errors.contents}>
-              <FormLabel>お問い合わせ内容(必須)</FormLabel>
-              <Input placeholder="例） こんにちは" {...register("contents", { required: true })} />
-              <FormErrorMessage>{errors.contents && "お問い合わせ内容を入力してください"}</FormErrorMessage>
-            </FormControl>
-          </Stack>
-          <Button mt={4} colorScheme="teal" loadingText="送信中" isLoading={isSubmitting} type="submit">
-            送信
-          </Button>
-        </Box>
+        <Skeleton isLoaded={isLoaded} fadeDuration={1}>
+          <Box w="xl" p={6} borderRadius="10px" boxShadow="md" bg="white">
+            <Stack spacing={5}>
+              <Heading fontSize={30}>CONTACT</Heading>
+              <Divider />
+              <FormControl id="name" isInvalid={!!errors.name}>
+                <FormLabel>お名前(必須)</FormLabel>
+                <Input placeholder="山田  太郎" {...register("name", { required: true })} />
+                <FormErrorMessage>{errors.name && "お名前を入力してください"}</FormErrorMessage>
+              </FormControl>
+              <FormControl id="email" isInvalid={!!errors.email}>
+                <FormLabel>メールアドレス(必須)</FormLabel>
+                <Input placeholder="test@example.com" {...register("email", { required: true })} />
+                <FormErrorMessage>{errors.email && "メールアドレスを入力してください"}</FormErrorMessage>
+              </FormControl>
+              <FormControl id="contents" isInvalid={!!errors.contents}>
+                <FormLabel>お問い合わせ内容(必須)</FormLabel>
+                <Input placeholder="例） こんにちは" {...register("contents", { required: true })} />
+                <FormErrorMessage>{errors.contents && "お問い合わせ内容を入力してください"}</FormErrorMessage>
+              </FormControl>
+            </Stack>
+            <Button mt={4} colorScheme="teal" loadingText="送信中" isLoading={isSubmitting} type="submit">
+              送信
+            </Button>
+          </Box>
+        </Skeleton>
       </Flex>
     </form>
   );

@@ -16,7 +16,6 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import { useHistory } from "react-router";
 
 export const Header: VFC = () => {
-  // chakra uiのカスタムフック onOpenとか便利なのたくさんある
   const { onOpen, isOpen, onClose } = useDisclosure();
   const history = useHistory();
 
@@ -58,12 +57,7 @@ export const Header: VFC = () => {
             PORTFOLIO
           </Heading>
         </Flex>
-        <Flex
-          align="center"
-          fontSize={{ base: 20, md: 25 }}
-          display={{ base: "none", md: "flex" }}
-          mr={10}
-        >
+        <Flex align="center" fontSize={{ base: 20, md: 25 }} display={{ base: "none", md: "flex" }} mr={10}>
           <Link
             w={12}
             h={12}
