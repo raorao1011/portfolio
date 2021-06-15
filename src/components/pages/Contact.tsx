@@ -55,7 +55,7 @@ export const Contact = () => {
       style={{ paddingTop: "13%", backgroundColor: "#EEEEF0", height: "100vh" }}
     >
       <Flex justify="center" textAlign="center">
-        <Skeleton isLoaded={isLoaded} fadeDuration={1}>
+        {/* <Skeleton isLoaded={isLoaded} fadeDuration={1}> */}
           <Box w="xl" p={6} borderRadius="10px" boxShadow="md" bg="white">
             <Stack spacing={5}>
               <Heading fontSize={30}>CONTACT</Heading>
@@ -76,11 +76,18 @@ export const Contact = () => {
                 <FormErrorMessage>{errors.contents && "お問い合わせ内容を入力してください"}</FormErrorMessage>
               </FormControl>
             </Stack>
-            <Button mt={4} colorScheme="teal" loadingText="送信中" isLoading={isSubmitting} type="submit">
+            <Button
+              mt={8}
+              w="xs"
+              colorScheme="teal"
+              loadingText="送信中"
+              isLoading={isSubmitting}
+              type="submit"
+            >
               送信
             </Button>
           </Box>
-        </Skeleton>
+        {/* </Skeleton> */}
       </Flex>
     </form>
   );
