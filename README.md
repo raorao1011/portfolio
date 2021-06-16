@@ -1,5 +1,7 @@
 # Portfolio
+
 ### 仕様技術
+
 - React
 - Chakra UI
 - TypeScript

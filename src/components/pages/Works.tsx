@@ -2,17 +2,7 @@ import React, { useCallback, useEffect, useState, VFC } from "react";
 import { Img } from "@chakra-ui/image";
 import { Box, Center, Heading, Stack, Wrap, WrapItem, Text, HStack } from "@chakra-ui/layout";
 import { Button } from "@chakra-ui/button";
-import {
-  useDisclosure,
-  Modal,
-  ModalBody,
-  ModalCloseButton,
-  ModalHeader,
-  ModalContent,
-  ModalOverlay,
-  UnorderedList,
-} from "@chakra-ui/react";
-import { ListItem } from "@material-ui/core";
+import { useDisclosure } from "@chakra-ui/react";
 import portfolioImage from "../../img/portfolio.png";
 import { useHistory } from "react-router-dom";
 import { WorksModal } from "../molecules/WorksModal";

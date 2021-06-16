@@ -1,15 +1,7 @@
 import React, { useCallback, VFC } from "react";
 import { Box, Flex, Heading, Link, Text } from "@chakra-ui/layout";
-import { Button, IconButton } from "@chakra-ui/button";
-import { ExternalLinkIcon, HamburgerIcon, Icon } from "@chakra-ui/icons";
-import {
-  Drawer,
-  DrawerBody,
-  DrawerCloseButton,
-  DrawerContent,
-  DrawerHeader,
-  DrawerOverlay,
-} from "@chakra-ui/modal";
+import { IconButton } from "@chakra-ui/button";
+import { HamburgerIcon, Icon } from "@chakra-ui/icons";
 import { useDisclosure } from "@chakra-ui/hooks";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import TwitterIcon from "@material-ui/icons/Twitter";
@@ -19,6 +11,7 @@ import { HeaderDrawer } from "../../molecules/HeaderDrawer";
 export const Header: VFC = () => {
   const { onOpen, isOpen, onClose } = useDisclosure();
   const history = useHistory();
+  const navLinkList = {}
 
   const onClickHome = useCallback(() => {
     history.push("/");
@@ -102,6 +95,7 @@ export const Header: VFC = () => {
           onClick={onOpen}
         />
       </Flex>
+
       <HeaderDrawer
         onClose={onClose}
         isOpen={isOpen}
