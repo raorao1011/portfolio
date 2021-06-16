@@ -3,7 +3,6 @@ import { Img } from "@chakra-ui/image";
 import { Box, Center, Heading, Stack, Wrap, WrapItem, Text, HStack } from "@chakra-ui/layout";
 import { Button } from "@chakra-ui/button";
 import {
-  Skeleton,
   useDisclosure,
   Modal,
   ModalBody,
@@ -16,6 +15,7 @@ import {
 import { ListItem } from "@material-ui/core";
 import portfolioImage from "../../img/portfolio.png";
 import { useHistory } from "react-router-dom";
+import { WorksModal } from "../molecules/WorksModal";
 
 export const Works: VFC = () => {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
@@ -53,18 +53,18 @@ export const Works: VFC = () => {
                 <Text fontSize="2xl">Coming soon</Text>
               </Center>
               <Heading as="h2">Coming soon...</Heading>
-              <Button colorScheme="teal" size="sm" _hover={{cursor: "default"}}>
+              <Button colorScheme="teal" size="sm" _hover={{ cursor: "default" }}>
                 詳細
               </Button>
             </Stack>
           </WrapItem>
           <WrapItem w="md" h="sm" borderRadius="10px" shadow="md" p={4} bgColor="white" justify="center">
             <Stack textAlign="center" spacing={4} w="md">
-              <Center borderWidth="1px"  bg="white" h="235px">
+              <Center borderWidth="1px" bg="white" h="235px">
                 <Text fontSize="2xl">Coming soon</Text>
               </Center>
               <Heading as="h2">Coming soon...</Heading>
-              <Button colorScheme="teal" size="sm" _hover={{cursor: "default"}}>
+              <Button colorScheme="teal" size="sm" _hover={{ cursor: "default" }}>
                 詳細
               </Button>
             </Stack>
@@ -72,26 +72,7 @@ export const Works: VFC = () => {
         </Wrap>
       </Center>
 
-      <Modal isOpen={isOpen} onClose={onClose} isCentered>
-        <ModalOverlay />
-        <ModalContent p={4}>
-          <ModalHeader>Portfolio</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            <Text pb="10px">
-              ポートフォリオサイトです。アウトプットする習慣を身に付けるために作成した最初のWEBアプリケーションです。
-            </Text>
-            <Heading fontSize="md">仕様技術</Heading>
-            <UnorderedList>
-              <HStack>
-                <ListItem>React</ListItem>
-                <ListItem>Chakra UI</ListItem>
-                <ListItem>TypeScript</ListItem>
-              </HStack>
-            </UnorderedList>
-          </ModalBody>
-        </ModalContent>
-      </Modal>
+      <WorksModal onClose={onClose} isOpen={isOpen} />
     </>
   );
 };
