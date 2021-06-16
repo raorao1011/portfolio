@@ -14,6 +14,7 @@ import { useDisclosure } from "@chakra-ui/hooks";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import { useHistory } from "react-router";
+import { HeaderDrawer } from "../../molecules/HeaderDrawer";
 
 export const Header: VFC = () => {
   const { onOpen, isOpen, onClose } = useDisclosure();
@@ -101,40 +102,14 @@ export const Header: VFC = () => {
           onClick={onOpen}
         />
       </Flex>
-      {/* placememntはどこからドロワーを出現させるか */}
-      <Drawer placement="right" size="xs" onClose={onClose} isOpen={isOpen}>
-        <DrawerOverlay>
-          <DrawerContent>
-            {/* DrawerBodyにはpが初期設定されている */}
-            <DrawerCloseButton />
-            <DrawerHeader>Menu</DrawerHeader>
-            <DrawerBody p={0} bg="">
-              <Button w="100%" onClick={onClickHome}>
-                HOME
-              </Button>
-              <Button w="100%" onClick={onClickProfile}>
-                PROFILE
-              </Button>
-              <Button w="100%" onClick={onClickWorks}>
-                WORKS
-              </Button>
-              <Button w="100%" onClick={onClickContact}>
-                CONTACT
-              </Button>
-              <Button w="100%">
-                <Link href="https://github.com/raorao1011" isExternal>
-                  GitHub <ExternalLinkIcon mx="2px" />
-                </Link>
-              </Button>
-              <Button w="100%">
-                <Link href="https://twitter.com/mth_rao" isExternal>
-                  Twitter <ExternalLinkIcon mx="2px" />
-                </Link>
-              </Button>
-            </DrawerBody>
-          </DrawerContent>
-        </DrawerOverlay>
-      </Drawer>
+      <HeaderDrawer
+        onClose={onClose}
+        isOpen={isOpen}
+        onClickHome={onClickHome}
+        onClickProfile={onClickProfile}
+        onClickWorks={onClickWorks}
+        onClickContact={onClickContact}
+      />
     </>
   );
 };
