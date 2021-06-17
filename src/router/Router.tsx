@@ -5,6 +5,7 @@ import { Home } from "../components/pages/Home";
 import { Page404 } from "../components/pages/Page404";
 import { Works } from "../components/pages/Works";
 import { Skills } from "../components/pages/Skills";
+import { SendGrid } from "../components/pages/SendGrid";
 
 export const Router: VFC = () => {
   return (
@@ -21,6 +22,9 @@ export const Router: VFC = () => {
         </Route>
         <Route path="/contact">
           <Contact />
+        </Route>
+        <Route path="/sendgrid">
+          <SendGrid />
         </Route>
         <Route path="*">
           <Page404 />
