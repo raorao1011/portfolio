@@ -33,12 +33,6 @@ export const Header: VFC = () => {
     onClose();
   }, []);
 
-  const onClickSendGrid = useCallback(() => {
-    history.push("/sendgrid");
-    onClose();
-  }, []);
-
-
   return (
     <>
       <Flex
@@ -90,9 +84,6 @@ export const Header: VFC = () => {
           </Box>
           <Box pr={4} _hover={{ cursor: "pointer", opacity: "0.7" }} fontSize="md">
             <Text onClick={onClickContact}>CONTACT</Text>
-          </Box>
-          <Box pr={4} _hover={{ cursor: "pointer", opacity: "0.7" }} fontSize="md">
-            <Text onClick={onClickSendGrid}>SENDGRID</Text>
           </Box>
         </Flex>
         <IconButton

@@ -18,6 +18,7 @@ type Props = {
 
 export const WorksModal: VFC<Props> = (props) => {
   const { onClose, isOpen } = props;
+
   return (
     <Modal isOpen={isOpen} onClose={onClose} isCentered>
       <ModalOverlay />
