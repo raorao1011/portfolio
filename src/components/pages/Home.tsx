@@ -1,6 +1,6 @@
-import { Image } from "@chakra-ui/react";
-import { Box, Center, Heading, Text } from "@chakra-ui/layout";
 import React, { VFC } from "react";
+import { Box, Center, Text } from "@chakra-ui/layout";
+import { Image } from "@chakra-ui/image";
 
 export const Home: VFC = () => {
   return (
@@ -13,7 +13,7 @@ export const Home: VFC = () => {
       >
         <Box height="100vh">
           <Center as="h1" height="100%" >
-            <Text letterSpacing={5} fontSize="3xl">WELCOME TO MY PORTFOLIO.</Text>
+            <Text letterSpacing={5} fontSize="3xl" textAlign="center">WELCOME TO MY PORTFOLIO.</Text>
           </Center>
         </Box>
       </Box>
