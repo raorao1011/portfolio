@@ -34,7 +34,7 @@ export const Contact = () => {
     });
   };
 
-  const onSubmit = (data: FormData) => {
+  const onSubmitForm = (data: FormData) => {
     return new Promise((resolve) => {
       setTimeout(() => {
         SendMessageToSlack(data);
@@ -65,7 +65,7 @@ export const Contact = () => {
 
   return (
     <form
-      onSubmit={handleSubmit(onSubmit)}
+      onSubmit={handleSubmit(onSubmitForm)}
       style={{ paddingTop: "13%", backgroundColor: "#EEEEF0", height: "100vh" }}
     >
       <Flex justify="center" textAlign="center">
