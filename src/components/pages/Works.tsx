@@ -24,8 +24,8 @@ export const Works: VFC = () => {
 
   return (
     <>
-      <Center pt="30" bgColor="#EEEEF0" height="100vh">
-        <Wrap justify="center" spacing="45px">
+      <Box bgColor="#EEEEF0" height="100vh" pt="15%">
+        <Wrap justify="center" spacing="45px" alignItems="center">
           <WrapItem w="md" h="sm" borderRadius="10px" shadow="md" p={4} bgColor="white">
             <Stack textAlign="center" spacing={4}>
               <Box borderWidth="1px" bg="white" onClick={onClickPortfolio} _hover={{ cursor: "pointer" }}>
@@ -60,7 +60,7 @@ export const Works: VFC = () => {
             </Stack>
           </WrapItem>
         </Wrap>
-      </Center>
+      </Box>
 
       <WorksModal onClose={onClose} isOpen={isOpen} />
     </>
