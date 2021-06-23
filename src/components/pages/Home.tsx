@@ -1,6 +1,5 @@
 import React, { VFC } from "react";
 import { Box, Center, Text } from "@chakra-ui/layout";
-import { Image } from "@chakra-ui/image";
 
 export const Home: VFC = () => {
   return (

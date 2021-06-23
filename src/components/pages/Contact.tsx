@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { Input, Button, Box, Flex, Stack, Heading, useToast, Divider, Skeleton } from "@chakra-ui/react";
+import { Input, Button, Box, Flex, Stack, Heading, useToast, Divider } from "@chakra-ui/react";
 import { FormErrorMessage, FormLabel, FormControl } from "@chakra-ui/react";
-import { IncomingWebhook } from "@slack/webhook";
+import { VFC } from "react";
 
 type FormData = {
   name: string;
@@ -10,7 +10,7 @@ type FormData = {
   contents: string;
 };
 
-export const Contact = () => {
+export const Contact: VFC = () => {
   const {
     register,
     handleSubmit,

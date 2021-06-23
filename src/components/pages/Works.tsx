@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState, VFC } from "react";
 import { Img } from "@chakra-ui/image";
-import { Box, Center, Heading, Stack, Wrap, WrapItem, Text, HStack } from "@chakra-ui/layout";
+import { Box, Center, Heading, Stack, Wrap, WrapItem, Text } from "@chakra-ui/layout";
 import { Button } from "@chakra-ui/button";
 import { useDisclosure } from "@chakra-ui/react";
 import portfolioImage from "../../img/portfolio.png";

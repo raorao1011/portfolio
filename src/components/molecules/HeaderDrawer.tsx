@@ -1,4 +1,4 @@
-import React, { VFC, memo } from "react";
+import React, { VFC } from "react";
 import {
   Drawer,
   DrawerBody,
