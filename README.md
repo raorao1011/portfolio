@@ -8,3 +8,5 @@
 - Chakra UI
 - TypeScript
 
+### 仕様
+- フォームの送信内容をSlackへ通知
