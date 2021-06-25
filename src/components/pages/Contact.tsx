@@ -20,7 +20,6 @@ export const Contact: VFC = () => {
     mode: "onSubmit",
   });
   const toast = useToast();
-  const [isLoaded, setIsLoaded] = useState<boolean>(false);
 
   const SendMessageToSlack = (data: FormData) => {
     const payload = {
@@ -51,13 +50,8 @@ export const Contact: VFC = () => {
     });
   };
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoaded(true);
-    }, 100);
-  }, [Image]);
-
-  useEffect(() => {
+  // Slackへの送信が成功したらフォームの内容をリセット
+  useEffect(() => { 
     if (isSubmitSuccessful) {
       reset();
     }
