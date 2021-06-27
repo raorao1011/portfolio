@@ -51,7 +51,7 @@ export const Contact: VFC = () => {
   };
 
   // Slackへの送信が成功したらフォームの内容をリセット
-  useEffect(() => { 
+  useEffect(() => {
     if (isSubmitSuccessful) {
       reset();
     }

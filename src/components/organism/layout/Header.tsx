@@ -11,14 +11,13 @@ import { HeaderDrawer } from "../../molecules/HeaderDrawer";
 export const Header: VFC = () => {
   const { onOpen, isOpen, onClose } = useDisclosure();
   const history = useHistory();
-  const navLinkList = {}
 
   const onClickHome = useCallback(() => {
     history.push("/");
     onClose();
   }, []);
 
-  const onClickProfile = useCallback(() => {
+  const onClickSkills = useCallback(() => {
     history.push("/skills");
     onClose();
   }, []);
@@ -73,11 +72,16 @@ export const Header: VFC = () => {
           >
             <Icon as={TwitterIcon} />
           </Link>
-          <Box pr={4} _hover={{ cursor: "pointer", opacity: "0.7" }} fontSize="md">
+          <Box
+            pr={4}
+            _hover={{ cursor: "pointer", opacity: "0.7" }}
+            _focus={{ outline: "none" }}
+            fontSize="md"
+          >
             <Text onClick={onClickHome}>HOME</Text>
           </Box>
           <Box pr={4} _hover={{ cursor: "pointer", opacity: "0.7" }} fontSize="md">
-            <Text onClick={onClickProfile}>SKILLS</Text>
+            <Text onClick={onClickSkills}>SKILLS</Text>
           </Box>
           <Box pr={4} _hover={{ cursor: "pointer", opacity: "0.7" }} fontSize="md">
             <Text onClick={onClickWorks}>WORKS</Text>
@@ -100,7 +104,7 @@ export const Header: VFC = () => {
         onClose={onClose}
         isOpen={isOpen}
         onClickHome={onClickHome}
-        onClickProfile={onClickProfile}
+        onClickSkills={onClickSkills}
         onClickWorks={onClickWorks}
         onClickContact={onClickContact}
       />
