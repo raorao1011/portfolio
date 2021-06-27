@@ -5,22 +5,31 @@ import { Home } from "../components/pages/Home";
 import { Page404 } from "../components/pages/Page404";
 import { Works } from "../components/pages/Works";
 import { Skills } from "../components/pages/Skills";
+import { HeaderLayout } from "../components/templates/HeaderLayout";
 
 export const Router: VFC = () => {
   return (
     <>
       <Switch>
         <Route exact path="/">
-          <Home />
+          <HeaderLayout>
+            <Home />
+          </HeaderLayout>
         </Route>
         <Route path="/skills">
-          <Skills />
+          <HeaderLayout>
+            <Skills />
+          </HeaderLayout>
         </Route>
         <Route path="/works">
-          <Works />
+          <HeaderLayout>
+            <Works />
+          </HeaderLayout>
         </Route>
         <Route path="/contact">
-          <Contact />
+          <HeaderLayout>
+            <Contact />
+          </HeaderLayout>
         </Route>
         <Route path="*">
           <Page404 />

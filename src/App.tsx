@@ -1,20 +1,17 @@
 import React from "react";
 import { Router } from "./router/Router";
 import { ChakraProvider } from "@chakra-ui/react";
-import { BrowserRouter, Link } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import { Header } from "./components/organism/Header";
 import "./App.css";
-import { Header } from "./components/organism/layout/Header";
 
 function App() {
   return (
-    <>
-      <ChakraProvider>
-        <BrowserRouter>
-          <Header />
-          <Router />
-        </BrowserRouter>
-      </ChakraProvider>
-    </>
+    <ChakraProvider>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+    </ChakraProvider>
   );
 }
 
