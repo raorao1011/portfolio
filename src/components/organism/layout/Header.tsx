@@ -55,9 +55,10 @@ export const Header: VFC = () => {
             w={12}
             h={12}
             cursor="pointer"
-            _hover={{ opacity: "0.8" }}
             href="https://github.com/raorao1011"
             isExternal
+            _hover={{ opacity: "0.8" }}
+            _focus={{ outline: "none" }}
           >
             <Icon as={GitHubIcon} />
           </Link>
@@ -66,9 +67,10 @@ export const Header: VFC = () => {
             w={12}
             h={12}
             cursor="pointer"
-            _hover={{ opacity: "0.8" }}
             href="https://twitter.com/mth_rao"
             isExternal
+            _hover={{ opacity: "0.8" }}
+            _focus={{ outline: "none" }}
           >
             <Icon as={TwitterIcon} />
           </Link>
