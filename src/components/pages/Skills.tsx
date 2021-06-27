@@ -21,8 +21,8 @@ export const Skills: VFC = () => {
   }, [Image]);
 
   return (
-    <Wrap pt="18%" justify="center" bgColor="#EEEEF0" h="100vh">
-      <WrapItem w="lg" mb={{ base: 0, md: "20px" }} mx="md" p={4}>
+    <Wrap pt="18%" justify="center" bgColor="#EEEEF0" h="100vh" spacing="0">
+      <WrapItem w="lg" mb={{ base: 0, md: "20px" }} p={4}>
         <Skeleton isLoaded={isLoaded} fadeDuration={0.8}>
           <Stack spacing="10px">
             <Heading size="3xl">Skills</Heading>
