@@ -1,10 +1,10 @@
 import React, { useCallback, useEffect, useState, VFC } from "react";
+import { useHistory } from "react-router-dom";
 import { Img } from "@chakra-ui/image";
 import { Box, Center, Heading, Stack, Wrap, WrapItem, Text } from "@chakra-ui/layout";
 import { Button } from "@chakra-ui/button";
 import { useDisclosure } from "@chakra-ui/react";
 import portfolioImage from "../../img/portfolio.png";
-import { useHistory } from "react-router-dom";
 import { WorksModal } from "../molecules/WorksModal";
 
 export const Works: VFC = () => {
@@ -23,10 +23,18 @@ export const Works: VFC = () => {
   }, [portfolioImage]);
 
   return (
-    <>
-      <Box bgColor="#EEEEF0" height="100vh" pt="15%">
-        <Wrap justify="center" spacing="45px" alignItems="center">
-          <WrapItem w="md" h="sm" borderRadius="10px" shadow="md" p={4} bgColor="white">
+    <div>
+      <Box bgColor="#EEEEF0" pt="15%" style={{ height: "100vh" }}>
+        <Wrap justify="center" alignItems="center" w="100%" p={4}>
+          <WrapItem
+            // w="md"
+            h="auto"
+            borderRadius="10px"
+            shadow="md"
+            p={4}
+            bgColor="white"
+            w={{ base: "100%", xs: "85%" }}
+          >
             <Stack textAlign="center" spacing={4}>
               <Box borderWidth="1px" bg="white" onClick={onClickPortfolio} _hover={{ cursor: "pointer" }}>
                 <Img src={portfolioImage} w="md" alt="portfolio_image" m="auto" />
@@ -37,32 +45,50 @@ export const Works: VFC = () => {
               </Button>
             </Stack>
           </WrapItem>
-          <WrapItem w="md" h="sm" borderRadius="10px" shadow="md" p={4} bgColor="white" justify="center">
-            <Stack textAlign="center" spacing={4} w="md">
+          {/* <WrapItem
+            // w="md"
+            h="sm"
+            borderRadius="10px"
+            shadow="md"
+            p={4}
+            bgColor="white"
+            justify="center"
+            w={{ base: "100%", xs: "85%" }}
+          >
+            <Stack textAlign="center" spacing={4}>
               <Center borderWidth="1px" bg="white" h="235px">
                 <Text fontSize="2xl">Coming soon</Text>
               </Center>
-              <Heading as="h2">Coming soon...</Heading>
+              <Heading as="h2" w="md">Coming soon...</Heading>
               <Button colorScheme="teal" size="sm" _hover={{ cursor: "default" }}>
                 詳細
               </Button>
             </Stack>
           </WrapItem>
-          <WrapItem w="md" h="sm" borderRadius="10px" shadow="md" p={4} bgColor="white" justify="center">
-            <Stack textAlign="center" spacing={4} w="md">
+          <WrapItem
+            // w="md"
+            h="sm"
+            borderRadius="10px"
+            shadow="md"
+            p={4}
+            bgColor="white"
+            justify="center"
+            w={{ base: "100%", xs: "85%" }}
+          >
+            <Stack textAlign="center" spacing={4} >
               <Center borderWidth="1px" bg="white" h="235px">
                 <Text fontSize="2xl">Coming soon</Text>
               </Center>
-              <Heading as="h2">Coming soon...</Heading>
+              <Heading as="h2" w="md">Coming soon...</Heading>
               <Button colorScheme="teal" size="sm" _hover={{ cursor: "default" }}>
                 詳細
               </Button>
             </Stack>
-          </WrapItem>
+          </WrapItem> */}
         </Wrap>
       </Box>
 
       <WorksModal onClose={onClose} isOpen={isOpen} />
-    </>
+    </div>
   );
 };

@@ -21,32 +21,30 @@ export const Skills: VFC = () => {
   }, [Image]);
 
   return (
-    <>
-      <Wrap pt="18%" justify="center" bgColor="#EEEEF0" h="100vh" >
-        <WrapItem w="lg" mb={{base: 0, md: "20px"}}>
-          <Skeleton isLoaded={isLoaded} fadeDuration={0.8}>
-            <Stack spacing="10px">
-              <Heading size="3xl">Skills</Heading>
-              <Divider />
-              <Text fontSize="3xl">HTML / CSS / React / Next.js</Text>
-              <Text fontSize="3xl">Redux / TypeScript / Firebase</Text>
-            </Stack>
-          </Skeleton>
-        </WrapItem>
-        <WrapItem w="xl">
-          <Skeleton isLoaded={isLoaded} fadeDuration={1} justifyContent="center">
-            <SimpleGrid spacing={10} columns={4}>
-              <Image src={htmlIcon} />
-              <Image src={cssIcon} />
-              <Image src={reactIcon} />
-              <Image src={nextjsIcon} />
-              <Image src={typescriptIcon} />
-              <Image src={reduxIcon} />
-              <Image src={firebaseIcon} />
-            </SimpleGrid>
-          </Skeleton>
-        </WrapItem>
-      </Wrap>
-    </>
+    <Wrap pt="18%" justify="center" bgColor="#EEEEF0" h="100vh">
+      <WrapItem w="lg" mb={{ base: 0, md: "20px" }} mx="md" p={4}>
+        <Skeleton isLoaded={isLoaded} fadeDuration={0.8}>
+          <Stack spacing="10px">
+            <Heading size="3xl">Skills</Heading>
+            <Divider />
+            <Text fontSize="3xl">HTML / CSS / React / Next.js</Text>
+            <Text fontSize="3xl">Redux / TypeScript / Firebase</Text>
+          </Stack>
+        </Skeleton>
+      </WrapItem>
+      <WrapItem w="xl" p={4}>
+        <Skeleton isLoaded={isLoaded} fadeDuration={1} justifyContent="center">
+          <SimpleGrid spacing={10} columns={4}>
+            <Image src={htmlIcon} />
+            <Image src={cssIcon} />
+            <Image src={reactIcon} />
+            <Image src={nextjsIcon} />
+            <Image src={typescriptIcon} />
+            <Image src={reduxIcon} />
+            <Image src={firebaseIcon} />
+          </SimpleGrid>
+        </Skeleton>
+      </WrapItem>
+    </Wrap>
   );
 };
