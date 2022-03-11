@@ -7,6 +7,7 @@
 - React
 - Chakra UI
 - TypeScript
+- Circle CI
 
 ### 仕様
 - フォームの送信内容をSlackへ通知
