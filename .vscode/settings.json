@@ -1,0 +1,13 @@
+{
+  "prettier.printWidth": 120,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.formatOnType": true,
+  "files.eol": "\n",
+  "editor.tabSize": 2,
+  "prettier.semi": false,
+  "editor.codeActionsOnSave": ["source.fixAll.eslint"],
+  "git.autofetch": "all"
+}
